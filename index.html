@@ -1,0 +1,1175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Construcciones D.S. | Maestro de Obra</title>
+
+<meta name="description" content="Construcciones D.S. - Servicios profesionales de maestro de obra, albañilería, remodelaciones, ampliaciones y reparaciones.">
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff;
+    color:#111;
+    line-height:1.6;
+}
+
+a{
+    text-decoration:none;
+    color:inherit;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+/* ================= HEADER ================= */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#050505;
+    color:white;
+    border-bottom:1px solid #333;
+}
+
+.navbar{
+    max-width:1200px;
+    margin:auto;
+    padding:18px 25px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+}
+
+.logo{
+    font-size:24px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#aaa;
+}
+
+nav{
+    display:flex;
+    gap:25px;
+}
+
+nav a{
+    color:#fff;
+    font-size:14px;
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:#aaa;
+}
+
+/* ================= HERO ================= */
+
+.hero{
+    min-height:90vh;
+    display:flex;
+    align-items:center;
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=1600&q=80");
+    background-size:cover;
+    background-position:center;
+    color:white;
+}
+
+.hero-content{
+    max-width:1200px;
+    width:100%;
+    margin:auto;
+    padding:80px 25px;
+}
+
+.small-title{
+    font-size:14px;
+    letter-spacing:4px;
+    text-transform:uppercase;
+    color:#ccc;
+    margin-bottom:20px;
+}
+
+.hero h1{
+    font-size:clamp(48px,8vw,90px);
+    line-height:1;
+    margin-bottom:20px;
+}
+
+.hero h2{
+    font-size:clamp(24px,4vw,40px);
+    margin-bottom:20px;
+}
+
+.hero p{
+    max-width:650px;
+    color:#ddd;
+    font-size:18px;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:15px 25px;
+    border-radius:4px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn-white{
+    background:white;
+    color:#111;
+}
+
+.btn-white:hover{
+    background:#ddd;
+}
+
+.btn-outline{
+    border:1px solid white;
+    color:white;
+}
+
+.btn-outline:hover{
+    background:white;
+    color:#111;
+}
+
+/* ================= INFO ================= */
+
+.info{
+    background:#050505;
+    color:white;
+}
+
+.info-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+}
+
+.info-box{
+    padding:30px;
+    text-align:center;
+    border-right:1px solid #333;
+}
+
+.info-box:last-child{
+    border-right:none;
+}
+
+.info-box strong{
+    display:block;
+    font-size:17px;
+    margin-bottom:5px;
+}
+
+.info-box span{
+    color:#aaa;
+    font-size:14px;
+}
+
+/* ================= GENERAL ================= */
+
+section{
+    padding:100px 25px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+}
+
+.section-title{
+    margin-bottom:55px;
+}
+
+.section-title span{
+    color:#777;
+    font-size:13px;
+    letter-spacing:3px;
+    text-transform:uppercase;
+}
+
+.section-title h2{
+    font-size:45px;
+    line-height:1.1;
+    margin-top:10px;
+}
+
+.section-title p{
+    max-width:650px;
+    color:#666;
+    margin-top:15px;
+}
+
+/* ================= SERVICES ================= */
+
+.services{
+    background:#f5f5f5;
+}
+
+.services-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.service{
+    background:white;
+    padding:35px;
+    border:1px solid #ddd;
+    transition:.3s;
+}
+
+.service:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 30px rgba(0,0,0,.08);
+}
+
+.service-number{
+    font-size:13px;
+    color:#888;
+    margin-bottom:25px;
+}
+
+.service h3{
+    font-size:24px;
+    margin-bottom:12px;
+}
+
+.service p{
+    color:#666;
+}
+
+/* ================= ABOUT ================= */
+
+.about-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.about-image img{
+    height:550px;
+    object-fit:cover;
+}
+
+.about-text p{
+    color:#555;
+    margin-bottom:20px;
+}
+
+.check-list{
+    list-style:none;
+    margin-top:25px;
+}
+
+.check-list li{
+    margin:12px 0;
+    font-weight:bold;
+}
+
+.check-list li::before{
+    content:"✓";
+    margin-right:10px;
+}
+
+/* ================= PROCESS ================= */
+
+.process{
+    background:#050505;
+    color:white;
+}
+
+.process .section-title p{
+    color:#aaa;
+}
+
+.process-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:20px;
+}
+
+.step{
+    border-top:1px solid #555;
+    padding-top:25px;
+}
+
+.step-number{
+    font-size:40px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.step h3{
+    margin-bottom:10px;
+}
+
+.step p{
+    color:#aaa;
+}
+
+/* ================= GALLERY ================= */
+
+.gallery{
+    background:#f5f5f5;
+}
+
+.gallery-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.gallery-item{
+    height:280px;
+    overflow:hidden;
+}
+
+.gallery-item img{
+    height:100%;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.gallery-item:hover img{
+    transform:scale(1.06);
+}
+
+/* ================= WHY US ================= */
+
+.why-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:20px;
+}
+
+.why{
+    border:1px solid #ddd;
+    padding:35px;
+}
+
+.why h3{
+    margin-bottom:12px;
+}
+
+.why p{
+    color:#666;
+}
+
+/* ================= CTA ================= */
+
+.cta{
+    background:#111;
+    color:white;
+    text-align:center;
+}
+
+.cta h2{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.cta p{
+    color:#bbb;
+    max-width:650px;
+    margin:0 auto 30px;
+}
+
+/* ================= FAQ ================= */
+
+.faq{
+    max-width:900px;
+    margin:auto;
+}
+
+details{
+    border-bottom:1px solid #ddd;
+    padding:20px 0;
+}
+
+summary{
+    cursor:pointer;
+    font-weight:bold;
+    font-size:18px;
+}
+
+details p{
+    color:#666;
+    margin-top:15px;
+}
+
+/* ================= CONTACT ================= */
+
+.contact{
+    background:#f5f5f5;
+}
+
+.contact-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-card{
+    background:white;
+    padding:40px;
+    border:1px solid #ddd;
+}
+
+.contact-card h3{
+    margin-bottom:15px;
+}
+
+.contact-card p{
+    color:#666;
+    margin-bottom:15px;
+}
+
+.contact-link{
+    display:block;
+    padding:15px;
+    background:#111;
+    color:white;
+    margin-top:12px;
+    text-align:center;
+    font-weight:bold;
+    border-radius:4px;
+}
+
+.contact-link:hover{
+    background:#333;
+}
+
+/* ================= FOOTER ================= */
+
+footer{
+    background:#050505;
+    color:white;
+    padding:50px 25px;
+}
+
+.footer-grid{
+    max-width:1200px;
+    margin:auto;
+    display:grid;
+    grid-template-columns:2fr 1fr 1fr;
+    gap:40px;
+}
+
+footer h3{
+    margin-bottom:15px;
+}
+
+footer p,
+footer a{
+    color:#999;
+}
+
+footer a{
+    display:block;
+    margin:7px 0;
+}
+
+.copyright{
+    max-width:1200px;
+    margin:40px auto 0;
+    padding-top:25px;
+    border-top:1px solid #333;
+    color:#777;
+    font-size:13px;
+}
+
+/* ================= WHATSAPP ================= */
+
+.whatsapp{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:#111;
+    color:white;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+    box-shadow:0 5px 20px rgba(0,0,0,.3);
+    z-index:2000;
+}
+
+/* ================= MOBILE ================= */
+
+@media(max-width:900px){
+
+    nav{
+        display:none;
+    }
+
+    .info-grid{
+        grid-template-columns:1fr;
+    }
+
+    .info-box{
+        border-right:none;
+        border-bottom:1px solid #333;
+    }
+
+    .services-grid,
+    .why-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .process-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .gallery-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .about-grid,
+    .contact-grid{
+        grid-template-columns:1fr;
+    }
+
+    .about-image img{
+        height:400px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    section{
+        padding:70px 18px;
+    }
+
+    .hero-content{
+        padding:70px 18px;
+    }
+
+    .hero{
+        min-height:80vh;
+    }
+
+    .hero h1{
+        font-size:52px;
+    }
+
+    .hero h2{
+        font-size:28px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .section-title h2{
+        font-size:36px;
+    }
+
+    .services-grid,
+    .why-grid,
+    .process-grid,
+    .gallery-grid{
+        grid-template-columns:1fr;
+    }
+
+    .gallery-item{
+        height:250px;
+    }
+
+    .about-image img{
+        height:300px;
+    }
+
+    .cta h2{
+        font-size:38px;
+    }
+
+    .footer-grid{
+        grid-template-columns:1fr;
+    }
+
+    .navbar{
+        padding:16px 18px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- ================= HEADER ================= -->
+
+<header>
+<div class="navbar">
+
+    <div class="logo">
+        CONSTRUCCIONES <span>D.S.</span>
+    </div>
+
+    <nav>
+        <a href="#servicios">Servicios</a>
+        <a href="#nosotros">Nosotros</a>
+        <a href="#trabajos">Trabajos</a>
+        <a href="#contacto">Contacto</a>
+    </nav>
+
+</div>
+</header>
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+<div class="hero-content">
+
+    <div class="small-title">
+        Maestro de obra
+    </div>
+
+    <h1>Construcciones D.S.</h1>
+
+    <h2>Construcción, reparación y remodelación.</h2>
+
+    <p>
+        Servicios de maestro de obra para trabajos de construcción,
+        remodelación, ampliación, reparación y terminaciones.
+    </p>
+
+    <div class="buttons">
+
+        <a class="btn btn-white"
+        href="https://wa.me/56937757478?text=Hola,%20quisiera%20consultar%20por%20un%20trabajo%20de%20construcción.">
+        Solicitar cotización
+        </a>
+
+        <a class="btn btn-outline" href="#servicios">
+        Ver servicios
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= INFO ================= -->
+
+<div class="info">
+
+<div class="info-grid">
+
+    <div class="info-box">
+        <strong>Maestro de obra</strong>
+        <span>Trabajo especializado</span>
+    </div>
+
+    <div class="info-box">
+        <strong>Construcción y reparación</strong>
+        <span>Soluciones para distintos trabajos</span>
+    </div>
+
+    <div class="info-box">
+        <strong>Atención directa</strong>
+        <span>Consulta y cotización</span>
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- ================= SERVICES ================= -->
+
+<section class="services" id="servicios">
+
+<div class="container">
+
+<div class="section-title">
+    <span>Servicios</span>
+    <h2>¿Qué trabajos realizamos?</h2>
+    <p>
+        Servicios enfocados directamente en trabajos de construcción
+        y obra.
+    </p>
+</div>
+
+<div class="services-grid">
+
+    <div class="service">
+        <div class="service-number">01</div>
+        <h3>Albañilería</h3>
+        <p>
+            Trabajos de albañilería y construcción de diferentes
+            estructuras y superficies.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-number">02</div>
+        <h3>Muros</h3>
+        <p>
+            Construcción, reparación y modificación de muros.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-number">03</div>
+        <h3>Remodelaciones</h3>
+        <p>
+            Renovación y modificación de espacios existentes.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-number">04</div>
+        <h3>Ampliaciones</h3>
+        <p>
+            Trabajos para ampliar y adaptar espacios.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-number">05</div>
+        <h3>Reparaciones</h3>
+        <p>
+            Reparación y mantenimiento de distintos elementos
+            de construcción.
+        </p>
+    </div>
+
+    <div class="service">
+        <div class="service-number">06</div>
+        <h3>Terminaciones</h3>
+        <p>
+            Trabajos de terminación, revestimientos y acabados.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= ABOUT ================= -->
+
+<section id="nosotros">
+
+<div class="container">
+
+<div class="about-grid">
+
+    <div class="about-image">
+
+        <img
+        src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?auto=format&fit=crop&w=1000&q=80"
+        alt="Trabajo de construcción">
+
+    </div>
+
+    <div class="about-text">
+
+        <div class="section-title">
+            <span>Construcciones D.S.</span>
+            <h2>Trabajo serio y directo.</h2>
+        </div>
+
+        <p>
+            En Construcciones D.S. nos enfocamos en realizar
+            trabajos de construcción, reparación y remodelación
+            de acuerdo con las necesidades de cada cliente.
+        </p>
+
+        <p>
+            La atención es directa para conocer el trabajo,
+            revisar lo que se necesita realizar y entregar
+            una cotización.
+        </p>
+
+        <ul class="check-list">
+            <li>Atención directa</li>
+            <li>Trabajo de construcción</li>
+            <li>Remodelaciones y reparaciones</li>
+            <li>Presupuesto según trabajo</li>
+        </ul>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= PROCESS ================= -->
+
+<section class="process">
+
+<div class="container">
+
+<div class="section-title">
+
+    <span>Proceso</span>
+
+    <h2>¿Cómo contratar?</h2>
+
+    <p>
+        Un proceso sencillo para comenzar a revisar tu trabajo.
+    </p>
+
+</div>
+
+<div class="process-grid">
+
+    <div class="step">
+        <div class="step-number">01</div>
+        <h3>Contacto</h3>
+        <p>
+            Escríbenos por WhatsApp o correo electrónico.
+        </p>
+    </div>
+
+    <div class="step">
+        <div class="step-number">02</div>
+        <h3>Cuéntanos el trabajo</h3>
+        <p>
+            Explica qué necesitas construir, reparar o remodelar.
+        </p>
+    </div>
+
+    <div class="step">
+        <div class="step-number">03</div>
+        <h3>Revisión</h3>
+        <p>
+            Se revisan las características del trabajo solicitado.
+        </p>
+    </div>
+
+    <div class="step">
+        <div class="step-number">04</div>
+        <h3>Cotización</h3>
+        <p>
+            Se conversa el presupuesto y los detalles del trabajo.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= GALLERY ================= -->
+
+<section class="gallery" id="trabajos">
+
+<div class="container">
+
+<div class="section-title">
+
+    <span>Trabajos</span>
+
+    <h2>Construcción en acción.</h2>
+
+    <p>
+        Algunas imágenes de referencia relacionadas con trabajos
+        de construcción.
+    </p>
+
+</div>
+
+<div class="gallery-grid">
+
+    <div class="gallery-item">
+        <img
+        src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?auto=format&fit=crop&w=900&q=80"
+        alt="Construcción">
+    </div>
+
+    <div class="gallery-item">
+        <img
+        src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=900&q=80"
+        alt="Trabajo de obra">
+    </div>
+
+    <div class="gallery-item">
+        <img
+        src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&w=900&q=80"
+        alt="Construcción de obra">
+    </div>
+
+    <div class="gallery-item">
+        <img
+        src="https://images.unsplash.com/photo-1562259949-e8e7689d7828?auto=format&fit=crop&w=900&q=80"
+        alt="Remodelación">
+    </div>
+
+    <div class="gallery-item">
+        <img
+        src="https://images.unsplash.com/photo-1504148455328-c376907d081c?auto=format&fit=crop&w=900&q=80"
+        alt="Herramientas de construcción">
+    </div>
+
+    <div class="gallery-item">
+        <img
+        src="https://images.unsplash.com/photo-1590479773265-7464e5d48118?auto=format&fit=crop&w=900&q=80"
+        alt="Trabajo de construcción">
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= WHY ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+    <span>¿Por qué contratar?</span>
+
+    <h2>Una atención enfocada en el trabajo.</h2>
+
+</div>
+
+<div class="why-grid">
+
+    <div class="why">
+        <h3>Experiencia práctica</h3>
+        <p>
+            Trabajos enfocados directamente en construcción,
+            reparación y remodelación.
+        </p>
+    </div>
+
+    <div class="why">
+        <h3>Comunicación directa</h3>
+        <p>
+            Puedes consultar directamente por WhatsApp o correo.
+        </p>
+    </div>
+
+    <div class="why">
+        <h3>Trabajo personalizado</h3>
+        <p>
+            Cada trabajo se revisa de acuerdo con sus características
+            y necesidades.
+        </p>
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CTA ================= -->
+
+<section class="cta">
+
+<div class="container">
+
+    <h2>¿Necesitas un maestro de obra?</h2>
+
+    <p>
+        Cuéntanos qué trabajo necesitas realizar y solicita
+        una cotización directamente.
+    </p>
+
+    <div class="buttons" style="justify-content:center;">
+
+        <a class="btn btn-white"
+        href="https://wa.me/56937757478?text=Hola,%20quisiera%20solicitar%20una%20cotización.">
+        Hablar por WhatsApp
+        </a>
+
+        <a class="btn btn-outline"
+        href="mailto:dulce.121608@gmail.com">
+        Enviar correo
+        </a>
+
+    </div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FAQ ================= -->
+
+<section>
+
+<div class="container">
+
+<div class="section-title">
+
+    <span>Preguntas frecuentes</span>
+
+    <h2>Preguntas habituales.</h2>
+
+</div>
+
+<div class="faq">
+
+    <details>
+        <summary>¿Cómo puedo solicitar una cotización?</summary>
+        <p>
+            Puedes escribir directamente por WhatsApp o enviar
+            un correo explicando el trabajo que necesitas.
+        </p>
+    </details>
+
+    <details>
+        <summary>¿Qué tipo de trabajos realizan?</summary>
+        <p>
+            Se realizan trabajos de albañilería, muros,
+            remodelaciones, ampliaciones, reparaciones y
+            terminaciones.
+        </p>
+    </details>
+
+    <details>
+        <summary>¿Puedo enviar fotografías del trabajo?</summary>
+        <p>
+            Sí. Puedes enviar fotografías y explicar lo que
+            necesitas directamente por WhatsApp.
+        </p>
+    </details>
+
+    <details>
+        <summary>¿Atienden distintos tipos de trabajos?</summary>
+        <p>
+            Cada trabajo se revisa individualmente para conocer
+            sus características y posibilidades.
+        </p>
+    </details>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= CONTACT ================= -->
+
+<section class="contact" id="contacto">
+
+<div class="container">
+
+<div class="section-title">
+
+    <span>Contacto</span>
+
+    <h2>Hablemos de tu proyecto.</h2>
+
+    <p>
+        Para consultar por un trabajo, comunícate directamente.
+    </p>
+
+</div>
+
+<div class="contact-grid">
+
+    <div class="contact-card">
+
+        <h3>WhatsApp</h3>
+
+        <p>
+            La forma más rápida de contactar.
+        </p>
+
+        <a
+        class="contact-link"
+        href="https://wa.me/56937757478?text=Hola,%20me%20interesa%20contratar%20un%20maestro%20de%20obra.">
+        +56 9 3775 7478
+        </a>
+
+    </div>
+
+    <div class="contact-card">
+
+        <h3>Correo electrónico</h3>
+
+        <p>
+            También puedes enviar tu consulta por correo.
+        </p>
+
+        <a
+        class="contact-link"
+        href="mailto:dulce.121608@gmail.com">
+        dulce.121608@gmail.com
+        </a>
+
+    </div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+    <div>
+        <h3>CONSTRUCCIONES D.S.</h3>
+
+        <p>
+            Servicios de maestro de obra, construcción,
+            reparación y remodelación.
+        </p>
+    </div
